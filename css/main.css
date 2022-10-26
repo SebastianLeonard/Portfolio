@@ -1,0 +1,78 @@
+.container {
+    margin: 1.5em;
+}
+
+/* Grid Section Styles */
+.page-title, .navigation, .tagline, .main-content, .logos, .inspirationals, .footer-section, .contact-info, .socials {
+    padding: 1em;
+    color: white;
+}
+
+.page-title {
+    background-color: #f6b4c3;
+}
+
+.navigation {
+    background-color: #f1d4c8;
+}
+
+.tagline {
+    background-color: #bc789e;
+    text-align: center;
+    padding-top: 12.5%;
+}
+
+.main-content {
+    background-color: #c3bad6;
+}
+
+.logos {
+    background-color: #c9ddd5;
+} 
+
+.inspirationals {
+    background-color: #f5a2a2;
+} 
+
+.footer-section {
+    background-color: #bc789e;
+} 
+
+.contact-info {
+    background-color: #f9d4a4;
+}
+
+.socials {
+    background-color: #89c4c2;
+}
+
+/* Image and main-item styles */
+
+.main-content .main-item {
+    display: flex;
+    clear: both;
+}
+
+.main-content .main-item img {
+    width: 20em;
+    margin: 2em 4em 2em;
+}
+
+.main-content .main-item:nth-of-type(even) {
+    flex-flow: row-reverse nowrap;
+}
+
+.main-content .main-item p {
+    width: 20em;
+    margin: 2em 0 2em 4em;
+    max-height: 20em;
+    text-align: right;
+}
+
+.main-content .main-item:nth-of-type(odd) p {
+    float: right;
+    margin: 2em 4em 2em 0;
+    width: 20em;
+    max-height: 20em;
+    text-align: left;
+}
