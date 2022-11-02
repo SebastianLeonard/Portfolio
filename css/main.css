@@ -1,5 +1,19 @@
+/* Global Styles */
+
 .container {
     margin: 1.5em;
+}
+
+#hamburger-checkbox {
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
 }
 
 /* Grid Section Styles */

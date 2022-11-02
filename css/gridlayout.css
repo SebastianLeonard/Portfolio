@@ -1,4 +1,6 @@
 @supports (grid-area: auto) {
+
+    /* As it stands, this entire layout is strictly for desktop. there are better layouts that will be implemented for mobile in coming updates */
     .container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
