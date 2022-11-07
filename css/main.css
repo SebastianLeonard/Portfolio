@@ -1,28 +1,63 @@
 /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
 
 .container {
     margin: 1.5em;
 }
 
-#hamburger-checkbox {
+#hamburger-checkbox, .hamburger-button {
     display: none;
 }
 
-nav ul {
-    list-style-type: none;
-}
+@media screen and (min-width: 850px) {
 
-nav ul li a {
-    text-decoration: none;
+    /* Hamburger Menu styles (WIP)*/
+    #hamburger-checkbox {
+        display: none;
+    }
+
+    .hamburger-button {
+        display: inline;
+    }
+
+    label {
+        float: right;
+    }
+
+    .menu-wrap {
+        height: 4em;
+    }
+
+    nav ul {
+        list-style-type: none;
+        background-color: #f1d4c8;
+        margin: -.5em;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    #hamburger-checkbox:checked ~ ul {
+        max-height: 15em;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        font-size: 1.25em;
+        display: block;
+    }
+
 }
 
 /* Grid Section Styles */
-.page-title, .navigation, .tagline, .main-content, .logos, .inspirationals, .footer-section, .contact-info, .socials {
+.hero-image, .navigation, .tagline, .main-content, .logos, .inspirationals, .footer-section, .contact-info, .socials {
     padding: 1em;
     color: white;
 }
 
-.page-title {
+.hero-image {
     background-color: #f6b4c3;
 }
 
