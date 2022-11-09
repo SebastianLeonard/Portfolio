@@ -13,6 +13,11 @@
 
 .hero-image {
     background-color: #f6b4c3;
+    margin-top:0;
+}
+
+#hamburger-checkbox:checked ~ .hero-image {
+    margin-top: 10em;
 }
 
 .navigation {
@@ -25,11 +30,21 @@
 }
 
 h1 {
-    display: inline;    
+    display: inline-block; 
+    font-size: 2em;
+    padding: .5em .25em 0;
 }
 
 #hamburger-checkbox {
     display: none;
+}
+
+#hamburger-checkbox ~ nav ul {
+    position: absolute;
+    width: 100%;
+    left: -1em;
+    top: 5em;
+    transition: .8s;
 }
 
 .hamburger-button {
@@ -37,7 +52,7 @@ h1 {
 }
 
 label {
-    float: right;
+    float: left;
 }
 
 nav ul {
@@ -48,15 +63,18 @@ nav ul {
     overflow: hidden;
 }
 
-#hamburger-checkbox:checked ~ ul {
+#hamburger-checkbox:checked ~ nav ul {
     max-height: 15em;
-    transition: .8s;
+    padding-left: 2.5em;
+
 }
 
 nav ul li a {
     text-decoration: none;
-    font-size: 1.25em;
+    font-size: 1.5em;
     display: block;
+    color: #8a64d6; /* Temporary color until color scheme is imported */
+    padding: .5em;
 }
 
 .tagline {
@@ -105,10 +123,11 @@ nav ul li a {
         width: 100%;
     }
 
-    nav > h1 {
-        display: inline-block;
+    h1 {
+        font-size: 1.5em;
         margin-left: 2em;
         margin-top: .75em;
+        padding: 0;
     }
 
     nav ul {
@@ -124,6 +143,11 @@ nav ul li a {
     nav ul li {
         display: inline-block;
         margin: 0 1em;
+    }
+
+    nav ul li a {
+        font-size: 1.25em;
+        padding: 0;
     }
     
     /* Hamburger Menu styles (WIP)*/
@@ -162,6 +186,8 @@ nav ul li a {
         max-height: 20em;
         text-align: left;
     }
+
+    /* Small mobile layout
 
         
 }
