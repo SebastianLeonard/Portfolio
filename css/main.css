@@ -1,3 +1,13 @@
+/* Color Scheme: 
+    #9C50F8/#8524fc: NEON PURPLE
+    #dfb5a9: PALE PINK (FONT COLOR OPTION)
+    #88fff9/#24fcfc: ELECTRIC BLUE (BEST FOR ACCENTS AND "SHADOWS")
+    #B4EDD2: MINT (BEST FOR FONT-COLOR)
+    #0D1821: SLATE GRAY/NEAR BLACK (OVERALL BACKGROUND COLOR)
+    #2318c0: SPACE VIOLET (GOOD BACKGROUND OPTION)
+    #114b63: DEEP-SEA BLUE (GOOD DARK-BLUE COLOR OPTION)
+*/
+
 /* Global Styles */
 * {
     margin: 0;
@@ -9,14 +19,18 @@
     color: white;
 }
 
+.container {
+    background-color: #0D1821;
+}
+
 /* Mobile First styles */
 
 .hero-image {
-    background-color: #f6b4c3;
+    background-color: #8524fc;
 }
 
 .navigation {
-    background-color: #f1d4c8;
+    background-color: #0D1821;
     position: fixed;
     width: 97%;
     top: 0;
@@ -44,7 +58,7 @@ label {
 
 nav ul {
     list-style-type: none;
-    background-color: #f1d4c8;
+    background-color: #0D1821;
     margin: .5em;
     max-height: 0;
     overflow: hidden;
@@ -67,38 +81,38 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.5em;
     display: block;
-    color: #8a64d6; /* Temporary color until color scheme is imported */
+    color: #9C50F8; /* Temporary color until color scheme is imported */
     padding: .5em;
 }
 
 .tagline {
-    background-color: #bc789e;
+    background-color: #0D1821;
     text-align: center;
     padding-top: 12.5%;
 }
 
 .main-content {
-    background-color: #c3bad6;
+    background-color: #114b63;
 }
 
 .logos {
-    background-color: #c9ddd5;
+    background-color: #8524fc;
 } 
 
 .inspirationals {
-    background-color: #f5a2a2;
+    background-color: #2318c0;
 } 
 
 .footer-section {
-    background-color: #bc789e;
+    background-color: #114b63;
 } 
 
 .contact-info {
-    background-color: #f9d4a4;
+    background-color: #2318c0;
 }
 
 .socials {
-    background-color: #89c4c2;
+    background-color: #8524fc;
 }
 
 /* Small mobile layout styles */
