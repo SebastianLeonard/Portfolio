@@ -18,7 +18,7 @@
     }
     
     .tagline {
-        grid-column: 5/9;
+        grid-column: 1/13;
         grid-row: 2/3;
     }
 
@@ -53,7 +53,7 @@
     }
 
     @media screen and (max-width: 949px) {
-        /* This layout is for Mobile Viewports, needs to be arranged to accomodate for the smaller screen sizes */
+        /* This layout is for Mobile Viewports, arranged to accomodate for the smaller screen sizes */
         .container {
             display: grid;
             grid-template-columns: repeat(12, 1fr);

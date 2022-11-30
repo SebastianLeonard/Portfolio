@@ -24,6 +24,7 @@
 }
 
 /* Mobile First styles */
+/* THESE ARE OVERALL STYLES THAT ARE EITHER APPLICABLE ON ALL VIEWPORTS, BEST LAID OUT FOR TABLET VIEWPORTS. */
 
 .hero-image {
     background-color: #8524fc;
@@ -49,7 +50,7 @@ h1 {
 }
 
 #hamburger-button {
-    display: inline;
+    display: none;
 }
 
 label {
@@ -60,27 +61,19 @@ nav ul {
     list-style-type: none;
     background-color: #0D1821;
     margin: .5em;
-    max-height: 0;
-    overflow: hidden;
     /* Styles for Drop Down Menu */
     position: absolute;
-    width: 100%;
-    left: -1em;
-    top: 5em;
-    transition: .8s;
-
+    right: 10px;
+    top: 2em;
 }
 
-#hamburger-checkbox:checked ~ nav ul {
-    max-height: 15em;
-    padding-left: 2.5em;
-
+nav ul li {
+    display: inline;
 }
 
 nav ul li a {
     text-decoration: none;
-    font-size: 1.5em;
-    display: block;
+    font-size: 1.2em;
     color: #9C50F8; /* Temporary color until color scheme is imported */
     padding: .5em;
 }
@@ -88,7 +81,6 @@ nav ul li a {
 .tagline {
     background-color: #0D1821;
     text-align: center;
-    padding-top: 12.5%;
 }
 
 .main-content {
@@ -117,13 +109,45 @@ nav ul li a {
 
 /* Small mobile layout styles */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
     nav h1 {
         font-size: 1.5em;
         text-align: center;
         max-width: 70%;
     }
+    
+    #hamburger-button {
+        display: inline;
+    }    
+    
+    nav ul {
+        margin: .5em;
+        max-height: 0;
+        overflow: hidden;
+        /* Styles for Drop Down Menu */
+        position: absolute;
+        width: 100%;
+        left: -1em;
+        top: 5em;
+        transition: .8s;
+        
+    }
+
+    #hamburger-checkbox:checked ~ nav ul {
+        max-height: 15em;
+        padding-left: 2.5em;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        font-size: 1.5em;
+        display: block;
+        color: #9C50F8; /* Temporary color until color scheme is imported */
+        padding: .5em;
+    }
 }
+
+/* Desktop Navigation styles */
 
 @media screen and (min-width: 950px) {
     
@@ -135,7 +159,6 @@ nav ul li a {
         margin: 0 -1.5em;
     }
     
-    /* Desktop Navigation styles */
     
     .navigation {
         width: 100%;
