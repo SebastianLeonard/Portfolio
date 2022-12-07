@@ -14,7 +14,11 @@
     padding: 0;
 }
 
-.hero-image, .navigation, .tagline, .main-content, .logos, .inspirationals, .footer-section, .contact-info, .socials {
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-image, .navigation, .tagline, .main-content, .logos, .resume, .footer-section, .contact-info, .socials {
     padding: 1em;
     color: white;
 }
@@ -23,12 +27,10 @@
     background-color: #0D1821;
 }
 
+
 /* Mobile First styles */
 /* THESE ARE OVERALL STYLES THAT ARE EITHER APPLICABLE ON ALL VIEWPORTS, BEST LAID OUT FOR TABLET VIEWPORTS. */
 
-.hero-image {
-    background-color: #8524fc;
-}
 
 .navigation {
     background-color: #0D1821;
@@ -37,6 +39,7 @@
     top: 0;
     left: 0;
     height: 4em;
+    z-index: 1000;
 }
 
 h1 {
@@ -78,33 +81,58 @@ nav ul li a {
     padding: .5em;
 }
 
+.hero-image {
+    overflow: hidden;
+}
+
+.hero-image video {
+    width: 400%;
+    position: relative;
+    left: -150%;
+    max-height: 104%;
+    z-index: -1000;
+}
+
 .tagline {
-    background-color: #0D1821;
+    background-color: rgba(13,24,33,0.7);
     text-align: center;
 }
 
+.tagline img {
+    display: none;
+    margin: 8px;
+}
+
+.tagline h1 {
+    font-size: 24pt;
+}
+
 .main-content {
-    background-color: #114b63;
+    background-image: linear-gradient(to bottom right, rgba(17,75,99, 1), rgba(17,75,99, 0.2));
+}
+
+.main-content .main-item p {
+    padding-top: 2em;
 }
 
 .logos {
-    background-color: #8524fc;
+    background-image: linear-gradient(to bottom right, rgba(133,36,252, 1), rgba(133,36,252, 0.2));
 } 
 
-.inspirationals {
-    background-color: #2318c0;
+.resume {
+    background-image: linear-gradient(to bottom right, rgba(35,24,192, 1), rgba(35,24,192, 0.2));
 } 
 
 .footer-section {
-    background-color: #114b63;
+    background-image: linear-gradient(to bottom right, rgba(17,75,99, 1), rgba(17,75,99, 0.2));
 } 
 
 .contact-info {
-    background-color: #2318c0;
+    background-image: linear-gradient(to bottom right, rgba(35,24,192, 1), rgba(35,24,192, 0.2));
 }
 
 .socials {
-    background-color: #8524fc;
+    background-image: linear-gradient(to bottom right, rgba(133,36,252, 1), rgba(133,36,252, 0.2));
 }
 
 /* Small mobile layout styles */
@@ -159,12 +187,25 @@ nav ul li a {
         margin: 0 -1.5em;
     }
     
-    
+    .tagline {
+        margin: -2em;
+    }
+     
+    .tagline img {
+        display: inline;
+        margin-top: 1em;
+    }
+
+    .tagline h1 {
+        margin: 0;
+        display: block;
+    }
+
     .navigation {
         width: 100%;
     }
 
-    h1 {
+    nav h1 {
         font-size: 1.5em;
         margin-left: 2em;
         margin-top: .75em;
@@ -196,14 +237,13 @@ nav ul li a {
         padding: 0;
     }
     
-    /* Hamburger Menu styles */
+    /* Hamburger Menu Styles */
     
     #hamburger-checkbox, #hamburger-button > img {
         display: none;
     }
     
-    /* Image and main-item styles */
-
+    /* General Styles */ 
     .main-content .main-item {
         display: flex;
         clear: both;
