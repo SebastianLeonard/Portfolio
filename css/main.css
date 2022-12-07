@@ -18,13 +18,14 @@ html {
     scroll-behavior: smooth;
 }
 
-.hero-image, .navigation, .tagline, .main-content, .logos, .resume, .footer-section, .contact-info, .socials {
+.navigation, .tagline, .main-content, .logos, .resume, .footer-section, .contact-info, .socials {
     padding: 1em;
     color: white;
 }
 
 .container {
     background-color: #0D1821;
+    font-family:  'Josefin Sans', Helvetica, sans-serif;
 }
 
 
@@ -43,9 +44,11 @@ html {
 }
 
 h1 {
-    display: inline-block; 
+    display: inline-block;
+    font-family: 'Play', Arial, fantasy;
     font-size: 2em;
-    padding: .5em .25em 0;
+    text-shadow: 2px 2px 8px #88fff9, -2px -2px 8px #24fcfc;
+    padding: .25em .5em 0;
 }
 
 #hamburger-checkbox {
@@ -105,6 +108,7 @@ nav ul li a {
 
 .tagline h1 {
     font-size: 24pt;
+    padding-bottom: .5em;
 }
 
 .main-content {
@@ -142,6 +146,7 @@ nav ul li a {
         font-size: 1.5em;
         text-align: center;
         max-width: 70%;
+        padding-top: .6em;
     }
     
     #hamburger-button {
@@ -173,18 +178,28 @@ nav ul li a {
         color: #9C50F8; /* Temporary color until color scheme is imported */
         padding: .5em;
     }
+
+    .tagline h1 {
+        font-size: 22pt;
+    }
+
+    .tagline h2 {
+        font-size: 16pt;
+    }
 }
 
-/* Desktop Navigation styles */
+/* Desktop styles */
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 970px) {
     
     .container {
         margin: 1.5em;
     }
     
-    .hero-image {
-        margin: 0 -1.5em;
+    .hero-image video {
+        width: 150%;
+        max-height: 1000%;
+        left: 0;
     }
     
     .tagline {
@@ -206,9 +221,9 @@ nav ul li a {
     }
 
     nav h1 {
-        font-size: 1.5em;
+        font-size: 2em;
         margin-left: 2em;
-        margin-top: .75em;
+        margin-top: .25em;
         padding: 0;
     }
 
@@ -237,34 +252,27 @@ nav ul li a {
         padding: 0;
     }
     
-    /* Hamburger Menu Styles */
-    
-    #hamburger-checkbox, #hamburger-button > img {
-        display: none;
-    }
-    
-    /* General Styles */ 
     .main-content .main-item {
         display: flex;
         clear: both;
     }
-
+    
     .main-content .main-item img {
         width: 20em;
         margin: 2em 4em 2em;
     }
-
+    
     .main-content .main-item:nth-of-type(even) {
         flex-flow: row-reverse nowrap;
     }
-
+    
     .main-content .main-item p {
         width: 20em;
         margin: 2em 0 2em 4em;
         max-height: 20em;
         text-align: right;
     }
-
+    
     .main-content .main-item:nth-of-type(odd) p {
         float: right;
         margin: 2em 4em 2em 0;
@@ -272,7 +280,10 @@ nav ul li a {
         max-height: 20em;
         text-align: left;
     }
-
-
-        
+    
+    /* Hamburger Menu Styles */
+    
+    #hamburger-checkbox, #hamburger-button > img {
+        display: none;
+    }
 }
