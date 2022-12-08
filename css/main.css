@@ -84,6 +84,11 @@ nav ul li a {
     padding: .5em;
 }
 
+nav ul li a:hover {
+    color: #B4EDD2;
+    text-shadow: 2px 2px 5px #88fff9, -2px -2px 5px #24fcfc, 2px -2px 5px #24fcfc, -2px 2px 5px #24fcfc;
+}
+
 .hero-image {
     overflow: hidden;
 }
@@ -103,20 +108,53 @@ nav ul li a {
 
 .tagline img {
     display: none;
-    margin: 8px;
 }
 
 .tagline h1 {
     font-size: 24pt;
-    padding-bottom: .5em;
+    padding-bottom: 0.5em;
+    margin-top: 0.2em;
+}
+
+h3 {
+    display: block;
+    font-size: 20pt;
+    text-align: center;
+    text-shadow: 2px 2px 8px #88fff9, -2px -2px 8px #24fcfc;
+    color: #B4EDD2;
+    margin: 1em;
+}
+
+h3::before {
+    display: block;
+    content: " ";
+    margin-top: -6em;
+    height: 6em;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .main-content {
     background-image: linear-gradient(to bottom right, rgba(17,75,99, 1), rgba(17,75,99, 0.2));
 }
 
-.main-content .main-item p {
-    padding-top: 2em;
+.main-item {
+    display: flex;
+}
+
+.main-item img {
+    margin: 0 1em 2em;
+}
+
+.description h4 {
+    padding-top: 3em;
+    clear: right;
+    align-items: flex-start;
+}
+
+.description p {
+    padding-top: 1em;
+    margin-bottom: 2em;
 }
 
 .logos {
@@ -137,6 +175,19 @@ nav ul li a {
 
 .socials {
     background-image: linear-gradient(to bottom right, rgba(133,36,252, 1), rgba(133,36,252, 0.2));
+}
+
+/* Brief XS mobile layout to adjust main-item display */
+@media screen and (max-width: 650px) {
+
+    .main-item {
+        display: inline;
+        clear: both;
+    }
+
+    .main-item img {
+        margin: 0 1em;
+    }
 }
 
 /* Small mobile layout styles */
@@ -186,6 +237,7 @@ nav ul li a {
     .tagline h2 {
         font-size: 16pt;
     }
+
 }
 
 /* Desktop styles */
@@ -198,17 +250,17 @@ nav ul li a {
     
     .hero-image video {
         width: 150%;
-        max-height: 1000%;
+        max-height: 200%;
         left: 0;
     }
     
     .tagline {
-        margin: -2em;
+        margin: -2em 0;
     }
      
     .tagline img {
         display: inline;
-        margin-top: 1em;
+        margin: 1em 8px 8px;
     }
 
     .tagline h1 {
@@ -233,7 +285,7 @@ nav ul li a {
         max-height: 3em;
         position: relative;
         float: right;
-        margin-left: 2em;
+        margin-left: 0.8em;
         margin-top: 1.25em;
         /* Counter-styles to remove Drop-Down Menu spacing and function */
         width: auto;
@@ -251,35 +303,32 @@ nav ul li a {
         font-size: 1.25em;
         padding: 0;
     }
-    
-    .main-content .main-item {
-        display: flex;
-        clear: both;
-    }
-    
+        
     .main-content .main-item img {
         width: 20em;
         margin: 2em 4em 2em;
     }
     
-    .main-content .main-item:nth-of-type(even) {
+    .main-item:nth-of-type(even) {
         flex-flow: row-reverse nowrap;
     }
     
-    .main-content .main-item p {
+    .main-item .description{
         width: 20em;
         margin: 2em 0 2em 4em;
         max-height: 20em;
         text-align: right;
     }
     
-    .main-content .main-item:nth-of-type(odd) p {
+    .main-item:nth-of-type(odd) .description {
         float: right;
         margin: 2em 4em 2em 0;
         width: 20em;
         max-height: 20em;
         text-align: left;
     }
+
+    
     
     /* Hamburger Menu Styles */
     

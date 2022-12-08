@@ -52,7 +52,7 @@
         grid-row: 8/9;
     }
 
-    @media screen and (max-width: 949px) {
+    @media screen and (max-width: 969px) {
         /* This layout is for Mobile Viewports, arranged to accomodate for the smaller screen sizes */
         .container {
             display: grid;
