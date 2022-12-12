@@ -18,7 +18,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.navigation, .tagline, .main-content, .logos, .resume, .footer-section, .contact-info, .socials {
+.navigation, .tagline, .main-content, .logos, .resume, .footer-section, .contact-info {
     padding: 1em;
     color: white;
 }
@@ -40,7 +40,7 @@ html {
     top: 0;
     left: 0;
     height: 4em;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 h1 {
@@ -59,7 +59,7 @@ h1 {
     display: none;
 }
 
-label {
+nav label {
     float: left;
 }
 
@@ -80,11 +80,12 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-size: 1.2em;
-    color: #9C50F8; /* Temporary color until color scheme is imported */
+    color: #9C50F8; 
     padding: .5em;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:active {
     color: #B4EDD2;
     text-shadow: 2px 2px 5px #88fff9, -2px -2px 5px #24fcfc, 2px -2px 5px #24fcfc, -2px 2px 5px #24fcfc;
 }
@@ -159,7 +160,129 @@ h3::before {
 
 .logos {
     background-image: linear-gradient(to bottom right, rgba(133,36,252, 1), rgba(133,36,252, 0.2));
-} 
+}
+
+.logos h4 {
+    text-align: center;
+}
+
+/* Slideshow styles within the Logos section */
+
+.slideshow {
+    position: relative;
+    box-shadow: 2px 2px 5px #88fff9, -2px -2px 5px #24fcfc, 2px -2px 5px #24fcfc, -2px 2px 5px #24fcfc;
+    background-image: linear-gradient(#222, #000);
+    margin: 10px auto;
+    min-width: 200px;
+    height: 360px;
+}
+
+.slideshow-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slideshow input {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    z-index: 1001;
+    width: 9px;
+    height: 9px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.slideshow input + label {
+    position: absolute;
+    bottom: 50px;
+    left: 49%;
+    border: 3px solid #fff;
+    width: 9px;
+    height: 9px;
+    z-index: 1002;
+    border-radius: 50%;
+	display: block;
+}
+
+.slideshow input:checked + label {
+    background-color: #fff;
+}
+
+.slide-selector-1, .btn-label-1 {
+    margin-left: -18px;
+}
+
+.slide-selector-3, .btn-label-3 {
+    margin-left: 18px;
+}
+
+.slideshow-slider {
+    width: 300%;
+    height: 70%;
+    position: relative;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: left ease-in 0.8s;
+}
+
+.slideshow-slider > li {
+    float: left;
+    width: 33.3333%;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.slideshow-slider > li picture{
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0 50px 0;
+}
+
+input.slide-selector-2:checked ~ .slideshow-content .slideshow-slider {
+    left: -100%;
+}
+
+input.slide-selector-3:checked ~ .slideshow-content .slideshow-slider {
+    left: -200%;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    width: 28px;
+    height: 38px;
+    background: transparent url(../images/arrows.png) no-repeat;
+    opacity: 0.8;
+    z-index: 1000;
+    margin: -19px;
+    cursor: pointer;
+    display: none;
+    transition: opacity linear 0.3s;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+.slide-selector-2:checked ~ .arrow.slide1,
+.slide-selector-3:checked ~ .arrow.slide2 {
+    display: block;
+    left: 30px;
+    background-position: top left;
+}
+
+.slide-selector-1:checked ~ .arrow.slide2,
+.slide-selector-2:checked ~ .arrow.slide3 {
+    display: block;
+    right: 30px;
+    background-position: top right;
+}
 
 .resume {
     background-image: linear-gradient(to bottom right, rgba(35,24,192, 1), rgba(35,24,192, 0.2));
@@ -170,16 +293,33 @@ h3::before {
 } 
 
 .contact-info {
-    background-image: linear-gradient(to bottom right, rgba(35,24,192, 1), rgba(35,24,192, 0.2));
+    margin-top: 7em;
 }
 
-.socials {
-    background-image: linear-gradient(to bottom right, rgba(133,36,252, 1), rgba(133,36,252, 0.2));
+.contact-info ul {
+    list-style-type: none;
 }
 
-/* Brief XS mobile layout to adjust main-item display */
+.contact-info ul li {
+    padding: 1em 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.contact-info ul li a {
+    text-decoration: none;
+    color: #9C50F8; 
+}
+
+.contact-info ul li a:hover,
+.contact-info ul li a:active {
+    color: #B4EDD2;
+    text-shadow: 2px 2px 5px #88fff9, -2px -2px 5px #24fcfc, 2px -2px 5px #24fcfc, -2px 2px 5px #24fcfc;
+}
+
+/* Brief XS mobile layout to adjust certain displays */
 @media screen and (max-width: 650px) {
-
+    /*Main Item Adjustments */
     .main-item {
         display: inline;
         clear: both;
@@ -187,6 +327,15 @@ h3::before {
 
     .main-item img {
         margin: 0 1em;
+    }
+
+    /* Slideshow adjustments */
+
+    .slideshow {
+        height: 325px;
+    }
+    .slideshow input + label {
+        left: 47.5%;
     }
 }
 
@@ -249,9 +398,9 @@ h3::before {
     }
     
     .hero-image video {
-        width: 150%;
+        width: 200%;
         max-height: 200%;
-        left: 0;
+        left: -50%;
     }
     
     .tagline {
@@ -274,7 +423,7 @@ h3::before {
 
     nav h1 {
         font-size: 2em;
-        margin-left: 2em;
+        margin-left: 1.5em;
         margin-top: .25em;
         padding: 0;
     }
@@ -328,7 +477,16 @@ h3::before {
         text-align: left;
     }
 
-    
+    .slideshow {
+        height: 375px;
+    }
+
+    .contact-info {
+        margin-top: 5em;
+    }
+    .contact-info ul li {
+        padding: .6em 0;
+    }
     
     /* Hamburger Menu Styles */
     
