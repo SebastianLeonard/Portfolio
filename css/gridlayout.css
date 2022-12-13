@@ -52,7 +52,7 @@
         .container {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(3, 10em) 1fr repeat(7, 10em);
+            grid-template-rows: repeat(3, 10em) 1fr repeat(8, 10em);
             grid-gap: .5em;
         }
     
@@ -78,22 +78,22 @@
         
         .logos {
             grid-column: 2/12;
-            grid-row: 6/9;
+            grid-row: 8/11;
         } 
         
         .resume {
             grid-column: 3/11;
-            grid-row: 5/6;
+            grid-row: 5/8;
         } 
         
         .footer-section {
             grid-column: 1/13;
-            grid-row: 9/span 4;
+            grid-row: 11/span 4;
         } 
         
         .contact-info {
             grid-column: 2/12;
-            grid-row: 9/12;
+            grid-row: 11/14;
         }
         
     }

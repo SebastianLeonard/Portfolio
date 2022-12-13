@@ -285,8 +285,39 @@ input.slide-selector-3:checked ~ .slideshow-content .slideshow-slider {
 }
 
 .resume {
-    background-image: linear-gradient(to bottom right, rgba(35,24,192, 1), rgba(35,24,192, 0.2));
-} 
+    background-image: url(../images/nebula-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.resume h3 {
+    margin-top: 2em;
+    color: #0D1821;
+}
+
+.resume div.inner-flex {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 5em;
+}
+
+.resume a.btn {
+    background-image: linear-gradient(to bottom, rgb(133,36,252), rgb(95, 27, 179));
+    padding: .8em;
+    border-radius: 0.2em;
+    text-decoration: none;
+    color:#fff;
+    justify-content: space-evenly;
+}
+
+.resume a:hover {
+    box-shadow: 2px 2px 5px #88fff9, -2px -2px 5px #24fcfc, 2px -2px 5px #24fcfc, -2px 2px 5px #24fcfc;
+}
+
+.resume p {
+    display: none;
+}
 
 .footer-section {
     background-image: linear-gradient(to bottom right, rgba(17,75,99, 1), rgba(17,75,99, 0.2));
@@ -387,6 +418,9 @@ input.slide-selector-3:checked ~ .slideshow-content .slideshow-slider {
         font-size: 16pt;
     }
 
+    .resume h3 {
+        margin-top: 3em;
+    }
 }
 
 /* Desktop styles */
@@ -479,6 +513,10 @@ input.slide-selector-3:checked ~ .slideshow-content .slideshow-slider {
 
     .slideshow {
         height: 375px;
+    }
+
+    .resume h3 {
+        margin-top: 5em;
     }
 
     .contact-info {
